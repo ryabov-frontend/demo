@@ -1,0 +1,74 @@
+.icon
+  display: inline-block
+  transition: all .3s ease
+
+  &-back
+    max-width: 20px
+    max-height: 20px
+    margin: -4px 5px -4px 0
+    color: inherit
+    transform: rotate(-180deg)
+
+  &-modal-close
+    max-width: 25px
+    max-height: 25px
+    color: #000
+
+  &-close-cart
+    max-width: 17px
+    max-height: 17px
+
+  &-pin
+    max-width: 13px
+    max-height: 19px
+
+  &-down
+    max-width: 18.5px
+    max-height: 3.5px
+    color: #000
+
+  &-modal-close
+    max-width: 25px
+    max-height: 25px
+    color: #000
+
+    &:hover
+      color: #940084
+
+  &-date
+    max-width: 15px
+    max-height: 15px
+    margin-top: -1px
+
+  &-rub,
+  &-dish
+    max-width: 21px
+    max-height: 13px
+    margin-top: -1px
+    margin-left: -3px
+
+  &-menu
+    border: 0
+    background-color: transparent
+    width: 81px
+    height: 81px
+    position: absolute
+    top: 0
+    left: 0
+    padding: 0
+
+    @media (min-width: 992px)
+      display: none
+
+  &-bar
+    background-color: #940084
+    width: 100%
+    display: block
+    max-width: 27px
+    height: 4px
+    margin-left: auto
+    margin-right: auto
+    border-radius: 2px
+
+    &:not(:last-child)
+      margin-bottom: 6px

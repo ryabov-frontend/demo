@@ -1,0 +1,155 @@
+.btn
+  font-family: 'Intro', sans-serif
+  display: inline-block
+  font-size: 12px
+  font-weight: 500
+  padding: 0 15px
+  border: 0
+  text-align: center
+  text-transform: uppercase
+  text-decoration: none !important
+  cursor: pointer
+  width: auto
+  height: 40px
+  line-height: 38px
+  min-width: 200px
+  border-radius: 20px
+  position: relative
+  overflow: hidden
+  letter-spacing: -.8px
+  transition: all .3s ease
+  white-space: nowrap
+  touch-action: manipulation
+  vertical-align: middle
+  margin-bottom: 0
+
+  &:active,
+  &.active
+    background-image: none
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125)
+
+  .icon
+    display: inline-block
+    margin-left: 20px
+    max-width: 25px
+    max-height: 25px
+
+    @media (max-width: 767px)
+      margin-left: 5px
+
+  &-default
+    background: #940084
+    border: 2px solid #940084
+    color: #fff
+
+    &:hover
+      color: #fff
+      background: #B01FA1
+      border: 2px solid #B01FA1
+
+    &:focus,
+    &:active,
+    &:active:hover
+      background: #851779
+      border: 2px solid #851779
+      color: #fff
+
+  &-primary
+    background: #d4d800
+    border: 2px solid #d4d800
+    color: #4f420c
+
+    &:hover
+      color: #4f420c
+      background: #fbff0a
+      border: 2px solid #fbff0a
+
+    &:focus,
+    &:active,
+    &:active:hover
+      background: #d3d600
+      border: 2px solid #d3d600
+      color: #4f420c
+
+  &._back
+    padding: 0 !important
+    min-width: 0
+    margin: 0 20px
+    background: transparent !important
+    border: 0 !important
+    color: #940084 !important
+
+    .icon
+      max-width: 18px
+      max-height: 18px
+      position: relative
+      top: -1px
+
+    &:hover
+      color: #c016ad !important
+
+  &._medium
+    height: 50px
+    font-size: 14px
+    line-height: 50px
+    border-radius: 25px
+    min-width: 0
+
+  &._huge
+    height: 60px
+    font-size: 18px
+    line-height: 60px
+    border-radius: 30px
+    min-width: 340px
+
+    @media (max-width: 767px)
+      font-size: 16px
+      min-width: 280px
+      padding-left: 0
+      padding-right: 0
+
+  &._full
+    width: 100%
+    min-width: 0
+
+  &._pink
+    background-color: #e61676
+    border-color: #e61676
+
+    &:hover
+      background-color: #b7125e
+      border-color: #b7125e
+
+    &:focus,
+    &:active,
+    &:active:hover
+      background-color: #b7125e
+      border-color: #b7125e
+
+  &._yellow
+    background-color: #d4d700
+    border-color: #d4d700
+
+    &:focus,
+    &:hover,
+    &:active
+      background-color: #a2a400
+      border-color: #a2a400
+
+  &._green
+    background: #58a332
+    border-color: #58a332
+
+    &:hover
+      background: #6fc543
+      border-color: #6fc543
+
+    &:focus,
+    &:active,
+    &:active:hover
+      background: #6fc543
+      border-color: #6fc543
+
+  &.disabled
+    pointer-events: none
+    opacity: .3

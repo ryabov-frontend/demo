@@ -1,0 +1,521 @@
+.number
+  &-container
+    display: inline-block
+    margin: auto
+
+  &-up
+    right: 0
+
+  &-down
+    left: 0
+
+  &-up,
+  &-down
+    position: absolute
+    top: 0
+    bottom: 0
+    width: 70px
+    text-align: right
+    line-height: 46px
+    padding-right: 20px
+    cursor: pointer
+
+.help
+  &-block
+    display: block
+    margin-top: 5px
+    margin-bottom: 10px
+    color: #737373
+
+.label
+  display: inline
+  padding: .2em .6em .3em
+  font-size: 75%
+  font-weight: 700
+  line-height: 1
+  color: #fff
+  text-align: center
+  white-space: nowrap
+  vertical-align: baseline
+  border-radius: .25em
+
+label
+  display: inline-block
+  max-width: 100%
+  margin-bottom: 5px
+  font-weight: 700
+
+input,
+textarea,
+select
+  width: 100%
+  outline: none !important
+  -webkit-appearance: none
+  -moz-appearance: none
+  box-shadow: none
+  border-radius: 0
+  transition: all .3s ease
+
+.radio,
+.checkbox
+  position: relative
+  display: block
+  margin-top: 10px
+  margin-bottom: 10px
+
+.radio
+  position: relative
+  padding-left: 37px
+  width: 100%
+  display: block
+  cursor: pointer
+
+  &:not(:last-child)
+    margin-bottom: 30px
+
+  input
+    display: none
+
+    &:checked ~ .radio-icon:before
+      opacity: 1
+
+  &-icon
+    position: absolute
+    top: 0
+    left: 0
+    border: 1px solid #c6c6c6
+    border-radius: 50%
+    background-color: #fff
+    width: 22px
+    height: 22px
+
+    &:before
+      content: ''
+      border-radius: 50%
+      background-color: #940186
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 10px
+      height: 10px
+      transform: translate(-50%, -50%)
+      transition: all .3s ease
+      opacity: 0
+
+  &-text
+    font-size: 18px
+    color: #000
+
+    span
+      color: #adabad
+
+      @media (max-width: 767px)
+        display: block
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"]
+  position: absolute
+  margin-top: 4px \9
+  margin-left: -20px
+
+.checkbox
+  position: relative
+  width: 100%
+  cursor: pointer
+
+  input
+    display: none
+
+    &:checked ~ .checkbox-block .checkbox-icon:before
+      opacity: 1
+
+  &-block
+    display: inline-flex
+    align-items: flex-start
+    justify-content: center
+
+  &-icon
+    border: 1px solid #c6c6c6
+    border-radius: 3px
+    background-color: #fff
+    margin-right: 8px
+    display: inline-block
+    top: 3px
+    width: 17px
+    height: 17px
+    position: relative
+    flex: none
+
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      top: 0
+      background: url('~assets/images/icons/icon-checkbox.svg') center no-repeat
+      background-size: 9px
+      transition: all .3s ease
+      opacity: 0
+
+  &-text
+    font-size: 18px
+    color: #000
+
+.has-error
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline
+    color: #a94442
+
+  &.radio,
+  &.checkbox,
+  &.radio-inline,
+  &.checkbox-inline
+    label
+      color: #a94442
+
+  .form
+    &-control
+      border-color: #a94442
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075)
+
+      &:focus
+        border-color: #843534
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483
+
+  .el-input__inner
+    border-color: #a94442 !important
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075) !important
+
+    &:focus
+      border-color: #843534 !important
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483 !important
+
+  .help-block
+    color: red
+
+.has-success
+  .form
+    &-control
+      border-color: #3c763d
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075)
+
+      &:focus
+        border-color: #2b542c
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #67b168
+
+  .el-input__inner
+    border-color: #3c763d !important
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075) !important
+
+    &:focus
+      border-color: #2b542c !important
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #67b168 !important
+
+.number
+  &-down,
+  &-up
+    position: absolute
+    top: 0
+    bottom: 0
+    width: 70px
+    cursor: pointer
+
+  &-down
+    left: 0
+    text-align: right
+    line-height: 46px
+    padding-right: 20px
+
+  &-up
+    right: 0
+    line-height: 51px
+    text-align: left
+    padding-left: 20px
+    font-size: 25px
+    color: #000
+    font-weight: 700
+
+.el-select
+  &-dropdown
+    border-width: 0 1px 1px !important
+    border-color: #C6C6C6 !important
+    border-radius: 0 0 25px 25px !important
+    box-shadow: none !important
+    margin-top: 0 !important
+
+    .popper__arrow
+      display: none !important
+
+    &__wrap
+      max-height: 357px
+
+    &__list
+      padding: 20px 30px 25px !important
+
+    &__item
+      padding: 0 !important
+      font-size: 18px !important
+      line-height: 1.2 !important
+      height: auto !important
+      color: #231F20 !important
+      background: none !important
+      margin-bottom: 13px
+
+      &:last-child
+        margin-bottom: 0
+
+      &.hover
+        color: #940084 !important
+
+      &.selected
+        font-weight: normal !important
+        cursor: default
+        color: #940084 !important
+
+        &::after
+          display: none
+
+.el-date
+  &-editor
+    & + .form-control-placeholder
+      padding-left: 28px
+
+    .el-input__suffix
+      display: none !important
+
+    .el-input__prefix
+      left: auto !important
+      right: 16px !important
+      font-size: 25px
+      color: #000
+      top: 1px !important
+
+  &-picker
+    border-width: 1px !important
+    border-color: #C6C6C6 !important
+    border-radius: 25px !important
+    box-shadow: none !important
+
+  &-table
+    td
+      &.available
+        &:hover
+          color: #940084 !important
+
+      &.today
+        span
+          color: #940084 !important
+
+      &.current:not(.disabled)
+        span
+          background-color: #940084 !important
+
+.el-popper[x-placement^=top] .popper__arrow
+  border-top-color: #C6C6C6 !important
+
+.el-popper[x-placement^=bottom] .popper__arrow
+  border-bottom-color: #C6C6C6 !important
+
+.form
+  &-placeholder
+    pointer-events: none
+    position: absolute
+    left: 2px
+    right: 2px
+    bottom: 2px
+    top: 2px
+    z-index: 12
+    padding: 0 48px
+    font-size: 18px
+    color: #000
+    overflow: hidden
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+
+    &::before
+      content: ''
+      position: absolute
+      top: 1px
+      right: 20px
+      bottom: 1px
+      width: 80px
+      pointer-events: none
+      border-radius: 0 25px 25px 0
+      z-index: 2
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%)
+
+    &.select
+      &:after
+        content: ''
+        position: absolute
+        top: 50%
+        right: 22px
+        pointer-events: none
+        border-top: 7px solid #000
+        border-left: 4px solid transparent
+        border-right: 4px solid transparent
+        z-index: 2
+        transform: translate(0, -50%)
+        transition: all .3s ease
+
+      .icon
+        color: #940084
+        fill: #940084
+
+      .form-placeholder--text
+        color: #000
+
+    &--text
+      white-space: nowrap
+      line-height: 1.5
+      z-index: 1
+      color: #888
+
+  &-group
+    position: relative
+    margin-bottom: 30px
+
+    .icon
+      position: absolute
+      top: 50%
+      left: 22px
+      color: #C4C4C4
+      fill: #C4C4C4
+      transition: all .3s ease
+      transform: translate(0, -50%)
+
+    ._row-flex
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+
+      [class*="col-"]
+        float: none
+
+      p
+        margin: 0
+
+    .el-date-editor.el-input,
+    .el-date-editor.el-input__inner,
+    .el-select
+      width: 100%
+
+      ::-webkit-input-placeholder
+        color: #888 !important
+
+      ::-moz-placeholder
+        color: #888 !important
+
+      :-moz-placeholder
+        color: #888 !important
+
+      :-ms-input-placeholder
+        color: #888 !important
+
+      .el-icon-arrow-up
+        transform: rotate(0) !important
+
+        &::before
+          display: none
+
+        &::after
+          content: ''
+          pointer-events: none
+          border-top: 7px solid #000
+          border-left: 4px solid transparent
+          border-right: 4px solid transparent
+          z-index: 2
+          transition: all .3s ease
+          height: 0
+          position: relative
+          top: 4px
+          right: 11px
+
+        &.is-reverse
+          &::after
+            transform: rotate(-180deg)
+
+      .el-input
+        &__inner
+          padding: 0 48px 0 25px
+          font-size: 18px
+          color: #000
+          border-color: #C6C6C6
+          border-radius: 25px
+          height: 50px
+          line-height: 50px
+          transition: all .3s ease
+
+          &:focus
+            border-color: #C6C6C6
+
+        &.is-focus
+          .el-input__inner
+            border-color: #C6C6C6
+            border-radius: 25px 25px 0 0
+
+      &-dropdown
+        &__wrap
+          max-height: 357px
+
+        &__list
+          padding: 20px 30px 25px
+
+
+  &-control
+    display: block
+    font-size: 14px
+    line-height: 1.42857143
+    color: #555555
+    background-image: none
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075)
+    border: 1px solid #c6c6c6
+    background-color: #fff
+    width: 100%
+    height: 50px
+    border-radius: 25px
+    padding: 0 30px
+    transition: all .3s ease
+
+    &-placeholder
+      pointer-events: none
+      position: absolute
+      left: 38px
+      right: 38px
+      top: 2px
+      height: 46px
+      z-index: 12
+      padding: 0
+      font-size: 18px
+      color: #a1a1a1
+      line-height: 50px
+      transition: all .3s ease
+      background: #fff
+
+      span
+        color: #940084
+
+    &.number
+      text-align: center
+      font-size: 25px
+      color: #000
+      line-height: 50px
+
+    &:focus
+      border-color: #940084
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6)
+
+      & ~ .form-control-placeholder
+        opacity: 0
+
+    &.active
+      & ~ .form-control-placeholder
+        opacity: 0

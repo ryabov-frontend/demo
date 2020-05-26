@@ -1,0 +1,512 @@
+@import 'fonts'
+@import 'grid'
+@import 'form'
+@import 'buttons'
+@import 'icons'
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+  outline: none
+  
+html,
+body
+  font-family: 'Myriad Pro', sans-serif
+  font-size: 16px
+  font-weight: 500
+  height: 100%
+  min-width: 300px
+  min-height: 100%
+
+html
+  font-size: 10px
+  -webkit-text-size-adjust: 100%
+  -webkit-tap-highlight-color: transparent
+
+body
+  line-height: 1.42857
+  color: #333
+  background-color: #fff
+
+  input:-internal-autofill-selected
+    background-color: #fff !important
+
+#__layout,
+#__nuxt
+  min-height: 100vh
+
+#scripts
+  visibility: hidden
+  opacity: 0
+  position: absolute
+  top: 0
+  left: 0
+  pointer-events: none
+  width: 0
+  height: 0
+
+#callMeContent>.call-me>.call-me-menu-button
+  height: 120px !important
+  width: 120px !important
+
+  .call-me-menu-main
+    width: 60px !important
+    height: 60px !important
+    border-radius: 50%
+    position: absolute
+    top: 30px
+    left: 30px
+    opacity: .86
+
+  .call-me-menu-img
+    top: 30px !important
+    left: 30px !important
+    transform: scale(.7) !important
+
+  .call-me-menu-circle
+    top: 26px !important
+    left: 26px !important
+
+  .call-me-menu-circle-2
+    top: 22px !important
+    left: 22px !important
+
+  .call-me-menu-circle,
+  .call-me-menu-circle-2
+    width: 60px !important
+    height: 60px !important
+
+.wrapper
+  padding-top: 135px
+  min-height: 100vh
+  position: relative
+  overflow: hidden
+  display: flex
+  flex-wrap: wrap
+  // align-items: center
+
+  @media (max-width: 991px)
+    padding-top: 81px
+
+  & > *
+    width: 100%
+
+  &.loading
+    height: 100vh
+    max-height: 100vh
+    overflow: hidden
+
+    .loader-wrapper
+      display: block
+
+.loader-wrapper
+  display: none
+  position: fixed
+  z-index: 1070
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  background: rgba(255, 255, 255, .8) url('~assets/images/ajax-loader.gif') 50% 50% no-repeat
+  pointer-events: none
+
+.site-top
+  margin: 0 0 auto
+
+.container,
+.container-fluid,
+.row,
+.carousel-wrapper
+  &:after,
+  &:before
+    content: ' '
+    display: table
+    width: 100%
+
+.container,
+.container-fluid,
+.carousel-wrapper
+  padding-left: 15px
+  padding-right: 15px
+  margin-right: auto
+  margin-left: auto
+
+.container,
+.carousel-wrapper
+  @media (min-width: 768px)
+    width: 768px
+
+  @media (min-width: 992px)
+    width: 970px
+
+  @media (min-width: 1260px)
+    width: 1230px
+
+  @media (max-width: 992px)
+    padding-left: 40px
+    padding-right: 40px
+
+  @media (max-width: 767px)
+    padding-left: 20px
+    padding-right: 20px
+
+.carousel-wrapper
+  width: 100%
+  padding-left: 0
+  padding-right: 0
+  position: relative
+  z-index: 1
+
+  .VueCarousel-dot-container
+    margin-top: 30px !important
+
+  .VueCarousel-dot
+    outline: none !important
+    background-color: #fff !important
+    border: 1px solid #d0d0d0 !important
+    width: 9px !important
+    height: 9px !important
+    padding: 0 !important
+    margin: 0 4.5px !important
+
+    &.VueCarousel-dot--active
+      background-color: #d0d0d0 !important
+
+  .VueCarousel-navigation-prev,
+  .VueCarousel-navigation-next
+    width: 18px
+    height: 34px
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    text-indent: -999999px
+    padding: 0 !important
+    outline: none !important
+
+    @media (min-width: 767px)
+      width: 37px
+      height: 70px
+
+  .VueCarousel-navigation-prev
+    background-image: url('~assets/images/other/slider-arrow__pink.png')
+    transform: translateY(-50%) translateX(calc(-100% - 10px)) !important
+
+    @media (max-width: 767px)
+      margin: 0 !important
+      transform: translateY(-50%) translateX(calc(-50% + 10px)) !important
+
+  .VueCarousel-navigation-next
+    background-image: url('~assets/images/other/slider-arrow-next__pink.png')
+    transform: translateY(-50%) translateX(calc(100% + 10px)) !important
+
+    @media (max-width: 767px)
+      margin: 0 !important
+      transform: translateY(-50%) translateX(calc(50% - 10px)) !important
+
+ul
+  list-style: none
+  padding: 0
+  margin: 0
+
+a
+  font-size: 16px
+  font-weight: 500
+  text-decoration: none
+  color: #940186
+  transition: all .3s ease
+
+  &:hover
+    text-decoration: none
+    color: #B01FA1
+
+img
+  max-width: 100%
+  height: auto
+  vertical-align: middle
+  border: 0
+
+p 
+  font-size: 15px
+  font-weight: 500
+  margin: 0 0 20px
+
+  .link
+    text-decoration: none
+    color: #940186
+    transition: all .3s ease
+    text-transform: inherit
+    font-family: inherit
+    font-size: inherit
+    font-weight: inherit
+    cursor: pointer
+
+    &:hover
+      text-decoration: none
+      color: #B01FA1
+
+  a
+    font-size: inherit
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  margin-top: 0
+  font-weight: 700
+  word-wrap: break-word
+  color: #4f420c
+
+h1.widget__title,
+h3.widget__title,
+h2,
+h4,
+h5
+  color: #333333
+
+h2
+  font-size: 30px
+  margin: 0 0 30px
+
+h3
+  font-size: 35px
+  margin: 0 0 20px
+
+  &.title
+    font-family: 'Intro', sans-serif
+    font-size: 32px
+    font-weight: 500
+    color: black
+    line-height: 1.2
+    margin: 0
+    text-transform: uppercase
+
+h5
+  font-size: 25px
+  margin: 0 0 20px
+
+button,
+input[type=button],
+input[type=reset],
+input[type=submit]
+  -webkit-appearance: button
+  cursor: pointer
+
+.blank-container
+  font-size: 19px
+  padding-bottom: 35px
+
+  p
+    font-size: 19px
+
+  ul,
+  ol
+    list-style: disc
+    padding-left: 20px
+    margin-bottom: 20px
+
+hr
+  margin: 35px 0
+  border: 0
+  border-top: 1px solid #940084
+
+.heading
+  padding: 40px 0
+  text-align: center
+
+  @media (max-width: 991px)
+    padding: 50px 0
+
+  @media (max-width: 767px)
+    padding: 25px 0
+
+  h1
+    font-family: 'Intro', sans-serif
+    font-size: 42px
+    font-weight: 500
+    color: #000
+    line-height: 1.2
+    margin: 0
+    text-transform: uppercase
+
+    @media (max-width: 767px)
+      font-size: 25px
+
+.relative
+  position: relative
+
+.price
+  display: inline-block
+  font-size: 18px
+  font-family: 'Intro', sans-serif
+  color: #000
+
+.discounts-schedule
+  padding: 10px 0
+  background-color: #fff895
+
+  &__value
+    font-size: 26px
+    font-weight: bold
+    padding: 5px 0
+
+.text
+  p
+    font-size: 20px
+    color: #373534
+    line-height: 1.5
+    text-align: justify
+    margin-bottom: 25px
+    letter-spacing: .3px
+
+    @media (max-width: 1259px)
+      font-size: 16px
+      color: #373534
+      line-height: 1.5
+
+    &.text-gray
+      color: #bdbbbb
+
+  &-more
+    font-size: 20px
+    color: #373534
+    line-height: 1.5
+    text-align: justify
+    letter-spacing: .3px
+
+.cursor-none
+  cursor: default
+
+.text-underline
+  text-decoration: underline
+
+.text-center
+  text-align: center
+
+.text-white
+  color: #fff
+
+.text-white-important
+  color: #fff !important
+
+.text-yellow
+  color: #ffd200
+
+.text-default
+  color: #940084
+
+._no-margin
+  margin: 0 !important
+
+.bg-gray 
+  background-color: #F2F2F2
+
+.widget
+  padding: 30px 0
+
+  @media (max-width: 1259px)
+    padding: 65px 0
+
+  @media (max-width: 767px)
+    padding: 45px 0
+
+  &__title
+    font-family: 'Intro', sans-serif
+    text-transform: uppercase
+    font-size: 40px
+    position: relative
+    z-index: 2
+
+    @media (max-width: 991px)
+      font-size: 32px
+
+    @media (max-width: 767px)
+      font-size: 25px
+      text-align: center
+
+    &-default
+      font-family: 'Myriad Pro', sans-serif
+      display: block
+      font-size: 40px
+      color: #373534
+      line-height: 1.2
+      font-weight: 400
+      text-transform: initial
+
+      @media (max-width: 991px)
+        font-size: 30px
+
+      @media (max-width: 767px)
+        font-size: 18px
+
+    &.text-white
+      color: #FFFFFF
+
+    &._mini
+      font-size: 25px
+
+  &.widget--mini
+    @media (max-width: 1259px)
+      padding: 45px 0
+
+  &.widget--content
+    p:not(.widget__title)
+      font-size: 18px
+      color: #373534
+      line-height: 1.444
+      text-align: left
+      margin-bottom: 20px
+
+    ul
+      margin-bottom: 20px
+      list-style-type: disc
+      padding-left: 40px
+      padding-top: 5px
+
+    ol
+      margin-bottom: 20px
+      list-style-type: decimal
+      padding-left: 40px
+      padding-top: 5px
+
+      li
+        font-size: 18px
+        color: #373534
+        line-height: 1.444
+        text-align: left
+
+  &.gradient-v
+    background: #940084
+
+  .gradient-v
+    background: #940084
+
+.m-t-30 
+  margin-top: 30px !important
+
+.m-b-30
+  margin-bottom: 30px !important
+
+.events__btn
+  display: block
+  text-align: center
+  margin-top: 60px
+
+  .btn
+    font-size: 26px
+    height: auto
+    padding: 12px 24px 6px
+    border-radius: 30px
+
+    @media (max-width: 991px)
+      font-size: 16px
+      padding: 12px 20px 10px
+      height: auto
+      line-height: normal
+
+._no-padding
+  padding: 0
